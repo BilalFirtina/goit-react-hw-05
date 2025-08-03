@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchCast } from "../../movie-api";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import style from "./MovieCast.module.css";
 const MovieCast = () => {
   const [cast, setCase] = useState([]);

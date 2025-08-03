@@ -1,6 +1,6 @@
 // src/components/App.jsx
 
-import { Routes, Route } from "react-router";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "../pages/HomePage/HomePage";
 import MoviesPage from "../pages/MoviesPage/MoviesPage";
 import MovieDetailsPage from "../pages/MovieDetailsPage/MovieDetailsPage";

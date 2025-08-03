@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchSelectedMovie } from "../../movie-api";
-import { NavLink, Outlet, useNavigate, useParams } from "react-router";
+import { NavLink, Outlet, useNavigate, useParams } from "react-router-dom";
 import style from "./MovieDetailsPage.module.css";
 import { GoArrowLeft } from "react-icons/go";
 
