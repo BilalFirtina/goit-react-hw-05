@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 const MovieList = ({ movies }) => {
   return (
     <div>
-      <h2>Trending Today</h2>
       <ul className={style.movieUl}>
         {movies.map((movie) => {
           return (

@@ -37,7 +37,9 @@ const MovieDetailsPage = () => {
           />
 
           <div>
-            <h2>{movie.title}</h2>
+            <h2>
+              {movie.title} ({new Date(movie.release_date).getFullYear()})
+            </h2>
             <p>{`User Score: %${Math.round(movie.vote_average * 10)}`}</p>
             <h3>Overview</h3>
             <p>{movie.overview}</p>
