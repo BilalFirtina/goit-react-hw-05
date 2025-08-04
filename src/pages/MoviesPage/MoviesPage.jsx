@@ -2,7 +2,7 @@ import style from "./MoviesPage.module.css";
 import { fetchSearchedMovie } from "../../movie-api";
 import { useState } from "react";
 import MovieList from "../../components/MovieList/MovieList";
-import { NavLink, useSearchParams } from "react-router";
+import { NavLink, useSearchParams } from "react-router-dom";
 const MoviesPage = () => {
   const [query, setQuery] = useState("");
   const [queryMovies, setQueryMovies] = useState([]);
@@ -31,11 +31,7 @@ const MoviesPage = () => {
           <button type="submit">Search</button>
         </div>
       </form>
-      {<MovieList movies={queryMovies} /> ? (
-        <MovieList movies={queryMovies} />
-      ) : (
-        ""
-      )}
+      {queryMovies.length > 0 && <MovieList movies={queryMovies} />}
     </>
   );
 };
