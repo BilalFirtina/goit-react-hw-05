@@ -12,7 +12,7 @@ const MovieList = ({ movies }) => {
               <Link
                 className={style.navLink}
                 to={`/movies/${movie.id}`}
-                state={location}
+                state={{ from: location }}
               >
                 {movie.title}
               </Link>
