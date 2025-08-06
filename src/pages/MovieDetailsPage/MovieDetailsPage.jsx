@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { fetchSelectedMovie } from "../../movie-api";
 import {
   NavLink,
@@ -15,6 +15,7 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+  const backLinkRef = useRef(location.state?.from ?? "/movies");
 
   useEffect(() => {
     const SelectedMovie = async () => {
@@ -24,13 +25,12 @@ const MovieDetailsPage = () => {
     SelectedMovie();
   }, [movieId]);
   const genres = movie.genres?.map((genre) => genre.name) ?? [];
-
   return (
     <>
       <div className={style.container}>
         <button
           onClick={() => {
-            navigate(location.state?.from || "/");
+            navigate(backLinkRef.current);
           }}
         >
           <GoArrowLeft className={style.icon} />

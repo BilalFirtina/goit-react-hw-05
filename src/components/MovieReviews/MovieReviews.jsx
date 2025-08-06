@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { fetchReviews } from "../../movie-api";
 import { useParams } from "react-router-dom";
 import style from "./MovieReviews.module.css";
-const MovieCast = () => {
+const MovieReviews = () => {
   const [content, setContent] = useState([]);
   const { movieId } = useParams();
   useEffect(() => {
@@ -28,4 +28,4 @@ const MovieCast = () => {
   );
 };
 
-export default MovieCast;
+export default MovieReviews;
